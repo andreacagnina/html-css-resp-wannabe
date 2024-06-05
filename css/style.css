@@ -111,6 +111,7 @@ img {
 .why-us {
     margin-bottom: 3rem;
 }
+
 .why-us .col-left {
     width: 40%;
 }
@@ -127,3 +128,65 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
+
+/* Il layout non si rompe nei dispositivi con dimensione del display fino a 768px. Modificata la width del container. */
+
+@media screen and (max-width: 768px) {
+
+    /* LAYOUT */
+    .container {
+        width: 100%;
+    }
+}
+
+/* Il layout non si rompe nei dispositivi con dimensione del display fino a 480px. Aggiunto un Wrap, modificate le width delle colonne, i margin e i padding per essere più vicini al Mockup, modificato il colore di background della why us section */
+
+@media screen and (max-width: 480px) {
+
+    /* LAYOUT */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* ALL SECTION */
+    .lessons .col,
+    .steps .col,
+    .why-us .col-left,
+    .why-us .col-right {
+        width: 100%;
+    }
+
+    /* LESSONS SECTION */
+    .col .text {
+        padding-bottom: 2.5rem;
+    }
+
+    /* STEPS SECTION */
+    .steps {
+        margin: 0 0;
+        padding: 3rem 0 0 0;
+    }
+
+    /* WHY US SECTION */
+    .why-us {
+        background-color: #202020;
+        padding-top: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    .why-us .col-left img {
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+/* BONUS */
+
+/* Il layout non si rompe nei dispositivi con dimensione del display compreso tra 768px e 1160px. */
+
+@media screen and (max-width: 1160px) and (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
